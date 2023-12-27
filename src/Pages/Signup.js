@@ -12,7 +12,8 @@ const Signup = () => {
   const handleSubmit = async(e)=>{
     e.preventDefault()
     try {
-      const res = await axios.post("http://localhost:900/api/v1/user/register",input)
+      // const res = await axios.post("http://localhost:900/api/v1/user/register",input)
+      const res = await axios.post("https://blog-server-eosin.vercel.app/api/v1/user/register",input)
       toast.success(res.data.message)
       navigate("/login")
     } catch (error) {

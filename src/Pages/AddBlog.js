@@ -14,7 +14,7 @@ const navigate = useNavigate()
   const [category,setCategory] = useState([])
   useEffect(()=>{
     const fetchCategories = async()=>{
-const res = await axios.get("http://localhost:900/api/v1/get/categories",
+const res = await axios.get("https://blog-server-eosin.vercel.app/api/v1/get/categories",
 {
   headers:{
     "Authorization" : `Bearer ${localStorage.getItem("token")}`
@@ -33,7 +33,7 @@ setCategory(res.data)
   const handleSubmit = async(e)=>{
 e.preventDefault()
 try {
-  const res = await axios.post("http://localhost:900/api/v1/add/blog",formData
+  const res = await axios.post("https://blog-server-eosin.vercel.app/api/v1/add/blog",formData
   ,
 {
   headers:{

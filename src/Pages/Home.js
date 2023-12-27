@@ -10,7 +10,7 @@ const Home = () => {
   useEffect(()=>{
     // <Toaster/>
 const fetchAllBlogs = async()=>{
-const res = await axios.get("http://localhost:900/api/v1/get/allblogs",
+const res = await axios.get("https://blog-server-eosin.vercel.app/api/v1/get/allblogs",
 {
   headers:{
     "Authorization" : `Bearer ${localStorage.getItem("token")}`
@@ -22,7 +22,7 @@ fetchAllBlogs()
   },[data])
   const handleDelete = async(id)=>{
     try {
-      const res = await axios.delete(`http://localhost:900/api/v1/delete/blog/${id}`)
+      const res = await axios.delete(`https://blog-server-eosin.vercel.app/api/v1/delete/blog/${id}`)
       // alert('Blog Deleted Successfully')
 
       if(res.data){

@@ -13,7 +13,8 @@ const handleLogin = async(e)=>{
   e.preventDefault()
   // console.log(input)
   try {
-    const res = await axios.post("http://localhost:900/api/v1/user/login",input)
+    // const res = await axios.post("http://localhost:900/api/v1/user/login",input)
+    const res = await axios.post("https://blog-server-eosin.vercel.app/api/v1/user/login",input)
     toast.success(res.data.message)
     // console.log(res.data)
     localStorage.setItem("token",res.data.token)

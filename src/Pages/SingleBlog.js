@@ -8,7 +8,8 @@ const SingleBlog = () => {
   const [blog,setBlog] = useState({})
   useEffect(()=>{
     const fetchSingleBlog = async()=>{
-const res = await axios.get(`http://localhost:900/api/v1/get/blog/${id}`
+// const res = await axios.get(`http://localhost:900/api/v1/get/blog/${id}`
+const res = await axios.get(`https://blog-server-eosin.vercel.app/api/v1/get/blog/${id}`
 ,
 {
   headers:{
