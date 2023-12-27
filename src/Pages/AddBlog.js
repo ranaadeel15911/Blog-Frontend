@@ -12,9 +12,9 @@ const navigate = useNavigate()
   })
   const [file,setFile] = useState([])
   const [category,setCategory] = useState([])
-  axios.defaults.withCredentials = true
   useEffect(()=>{
     const fetchCategories = async()=>{
+// const res = await axios.get("http://localhost:900/api/v1/get/categories",
 const res = await axios.get("https://blog-server-eosin.vercel.app/api/v1/get/categories",
 {
   headers:{
@@ -34,6 +34,7 @@ setCategory(res.data)
   const handleSubmit = async(e)=>{
 e.preventDefault()
 try {
+  // const res = await axios.post("http://localhost:900/api/v1/add/blog",formData
   const res = await axios.post("https://blog-server-eosin.vercel.app/api/v1/add/blog",formData
   ,
 {
