@@ -11,6 +11,7 @@ const AddCategory = () => {
 e.preventDefault()
 try {
   const res = await axios.post("https://blog-server-eosin.vercel.app/api/v1/add/category",input,
+  // const res = await axios.post("http://localhost:900/api/v1/add/category",input,
   {
     headers:{
       "Authorization" : `Bearer ${localStorage.getItem("token")}`

@@ -34,8 +34,8 @@ setCategory(res.data)
   const handleSubmit = async(e)=>{
 e.preventDefault()
 try {
-  // const res = await axios.post("http://localhost:900/api/v1/add/blog",formData
-  const res = await axios.post("https://blog-server-eosin.vercel.app/api/v1/add/blog",formData
+  // const res = await axios.post("http://localhost:900/api/v1/add",formData
+  const res = await axios.post("https://blog-server-eosin.vercel.app/api/v1/add",formData
   ,
 {
   headers:{
