@@ -26,16 +26,17 @@ setCategory(res.data)
     fetchCategories()
   },[])
   //if we wants to send file of any type with form than we use FormData() function
-  const formData = new FormData()
-  formData.append("title",input.title)
-  formData.append("category",input.category)
-  formData.append("description",input.description)
+  // const formData = new FormData()
+  // formData.append("title",input.title)
+  // formData.append("category",input.category)
+  // formData.append("description",input.description)
   // formData.append("thumbnail",file)
   const handleSubmit = async(e)=>{
 e.preventDefault()
 try {
   // const res = await axios.post("http://localhost:900/api/v1/add",formData
-  const res = await axios.post("https://blog-server-eosin.vercel.app/api/v1/add",formData
+  // const res = await axios.post("https://blog-server-eosin.vercel.app/api/v1/add",formData
+  const res = await axios.post("https://blog-server-eosin.vercel.app/api/v1/add",input
   ,
 {
   headers:{
