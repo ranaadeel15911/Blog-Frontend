@@ -30,7 +30,7 @@ setCategory(res.data)
   formData.append("title",input.title)
   formData.append("category",input.category)
   formData.append("description",input.description)
-  formData.append("thumbnail",file)
+  // formData.append("thumbnail",file)
   const handleSubmit = async(e)=>{
 e.preventDefault()
 try {
